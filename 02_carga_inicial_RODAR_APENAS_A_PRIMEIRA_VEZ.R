@@ -1,10 +1,13 @@
 
-library(bigrquery)
-library(rvest)
-library(tidyverse)
-library(janitor)
-library(xml2)
-library(stringr)
+source(file = '01.instalacao_de_pacotes.R', encoding = 'utf-8')
+
+
+# library(bigrquery)
+# library(rvest)
+# library(tidyverse)
+# library(janitor)
+# library(xml2)
+# library(stringr)
 
 ################################################################################
 #### captura os parâmetros para compor as URLs de acesso aos repositórios dos editais
