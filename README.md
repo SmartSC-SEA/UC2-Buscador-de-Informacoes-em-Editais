@@ -26,4 +26,4 @@ https://www.r-project.org/
 - Recomenda-se a utilização da ferramenta de software livre RStudio, que deverá ser baixada no endereço:
 https://www.rstudio.com/
 - Antes de executar o Script "02_carga_inicial_RODAR_APENAS_A_PRIMEIRA_VEZ.R"
-- Verificar ou instalar os pacotes necessários executando o script "01.instalacao_de_pacotes.R"
+- verificar ou instalar os pacotes necessários executando o script "01.instalacao_de_pacotes.R"
