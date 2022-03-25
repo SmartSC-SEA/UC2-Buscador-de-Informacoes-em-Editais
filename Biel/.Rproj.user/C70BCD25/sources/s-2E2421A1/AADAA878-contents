@@ -1,7 +1,0 @@
-
-source(file = '01_instalacao_de_pacotes.R', encoding = 'utf-8')
-source(file = '02_lista_orgaos.R', encoding = 'utf-8')
-source(file = '00.baixa_dados_big_query.R', encoding = 'utf-8')
-
-
-
