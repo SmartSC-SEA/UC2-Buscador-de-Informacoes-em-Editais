@@ -1,0 +1,512 @@
+)
+con
+if(nrow(base_final)>0){
+tablename <- "tabela_dou_sc"
+base_final <- base_final %>% mutate_all(as.character)
+bigrquery::dbWriteTable(con, tablename, base_final, append=F, verbose = T, row.names=F, overwrite=T, fields=base_final)
+print("Dataframe Ocorrencias Uploaded")
+}
+library(bigrquery)
+library(rvest)
+library(tidyverse)
+library(janitor)
+library(xml2)
+library(stringr)
+library(bigrquery)
+library(rvest)
+library(tidyverse)
+library(janitor)
+library(xml2)
+library(stringr)
+link_base <- 'https://sistemas4.sc.gov.br/sea/portaldecompras/acompanha_licitacao_edital.asp?lstOrgaos=1&optNatureza=&lstAno=2022&lstSituacao=4&txtNuEdital=&lstModalidade=0&txtObjeto=&dataInclusao=&descricaoGrupoClasse=&paginaAtual='
+num_pags  <- 1:10
+i <- 1
+#num_pags  <- 1:10
+print(paste0('Capturando Parâmetros da Página ', i, ' de ', length(1:10)))
+link <- paste0(link_base,i)
+read_html(link) %>% html_nodes("img") %>% html_attr("onclick")
+read_html(link) %>% html_nodes("img") %>% html_attr("onclick") == TRUE
+read_html(link) %>% html_nodes("img") %>% html_attr("onclick") == FALSE
+get(link) %>% html_nodes("img") %>% html_attr("onclick") == FALSE
+get(link)
+library(httr)
+get(link)
+GET(link)
+read_html(link)
+GET(link)
+GET(link) %>% html_nodes("img") %>% html_attr("onclick"))
+GET(link) %>% html_nodes("img") %>% html_attr("onclick")
+GET(link)
+a <- GET(link)
+View(a)
+a[["url"]]
+conteudo_completo <- GET(link)
+conteudo_completo <- rawToChar(consulta$content)
+connsulta <- GET(link)
+conteudo_completo <- rawToChar(consulta$content)
+connsulta <- GET(link)
+conteudo_completo <- rawToChar(consulta$content)
+consulta <- GET(link)
+conteudo_completo <- rawToChar(consulta$content)
+conteudo_base <- fromJSON(conteudo_completo, flatten=TRUE)
+conteudo_base <- jsonlite::fromJSON(conteudo_completo, flatten=TRUE)
+conteudo_base <- conteudo_base <- xmlToDataFrame(conteudo_completo)
+conteudo_base <- XML::xmlToDataFrame(conteudo_completo)
+conteudo_base <- XML::xmlToDataFrame(conteudo_completo)
+conteudo_base <- xml2::::xmlToDataFrame(conteudo_completo)
+conteudo_base <- xmlparsedata::::::xmlToDataFrame(conteudo_completo)
+conteudo_base <- xml2::xmlToDataFrame(conteudo_completo)
+conteudo_base <- xmlparsedata:::xmlToDataFrame(conteudo_completo)
+conteudo_base <- xmlparsedata::xmlToDataFrame(conteudo_completo)
+consulta <- GET(link)
+conteudo_completo <- rawToChar(consulta$content)
+library(bigrquery)
+library(rvest)
+library(tidyverse)
+library(janitor)
+library(xml2)
+library(stringr)
+conteudo_base <- str_flatten(conteudo_completo)
+conteudo_base
+conteudo_base <- conteudo_completo
+conteudo_base
+conteudo_completo %>% html_nodes("img") %>% html_attr("onclick")
+conteudo_completo %>% html_nodes("img")
+a<-read_html(link)
+View(a)
+a
+a == TRUE
+b<-
+b<-read_html(link) %>% html_nodes("img") %>% html_attr("onclick")
+b
+is.character(a)
+is.character(b)
+link_base
+c<-read_html(https://sistemas4.sc.gov.br/sea/portaldecompras/acompanha_licitacao_edital.asp?lstOrgaos=1&optNatureza=&lstAno=2022&lstSituacao=4&txtNuEdital=&lstModalidade=0&txtObjeto=&dataInclusao=&descricaoGrupoClasse=&paginaAtual=150)
+c<-read_html(https://sistemas4.sc.gov.br/sea/portaldecompras/acompanha_licitacao_edital.asp?lstOrgaos=1&optNatureza=&lstAno=2022&lstSituacao=4&txtNuEdital=&lstModalidade=0&txtObjeto=&dataInclusao=&descricaoGrupoClasse=&paginaAtual=150)
+i <- 1100
+#num_pags  <- 1:10
+link <- paste0(link_base,i)
+a<-read_html(link)
+a
+a<-read_html(link) %>% html_nodes("img") %>% html_attr("onclick")
+a
+length(a)
+i <- 1
+#num_pags  <- 1:10
+link <- paste0(link_base,i)
+b<-read_html(link) %>% html_nodes("img") %>% html_attr("onclick")
+length(b)
+i <- 1
+#num_pags  <- 1:10
+link <- paste0(link_base,i)
+print(paste0('Capturando Parâmetros da Página ', i, ' de ', length(1:10)))
+base_parametros_final <- data.frame()
+while (length(try(busca_parametros <- as.data.frame(read_html(link) %>% html_nodes("img") %>% html_attr("onclick"))) >= 1)) {
+print(paste0('Capturando Parâmetros da Página ', i, ' de ', length(1:10)))
+link <- paste0(link_base,i)
+try(busca_parametros <- as.data.frame(read_html(link) %>% html_nodes("img") %>% html_attr("onclick")))
+base_parametros_final <- bind_rows(base_parametros_final, busca_parametros)
+#Sys.sleep(time = 15)
+}
+link_base <- 'https://sistemas4.sc.gov.br/sea/portaldecompras/acompanha_licitacao_edital.asp?lstOrgaos=1&optNatureza=&lstAno=2022&lstSituacao=4&txtNuEdital=&lstModalidade=0&txtObjeto=&dataInclusao=&descricaoGrupoClasse=&paginaAtual='
+i <- 1
+link <- paste0(link_base,i)
+print(paste0('Capturando Parâmetros da Página ', i))
+base_parametros_final <- data.frame()
+while (length(try(busca_parametros <- as.data.frame(read_html(link) %>% html_nodes("img") %>% html_attr("onclick"))) >= 1)) {
+print(paste0('Capturando Parâmetros da Página ', i))
+link <- paste0(link_base,i)
+try(busca_parametros <- as.data.frame(read_html(link) %>% html_nodes("img") %>% html_attr("onclick")))
+base_parametros_final <- bind_rows(base_parametros_final, busca_parametros)
+#Sys.sleep(time = 15)
+i <- i + 1
+}
+suppressWarnings()
+suppressWarnings()
+options(warn = -1)
+base_parametros_final <- data.frame()
+while (length(try(busca_parametros <- as.data.frame(read_html(link) %>% html_nodes("img") %>% html_attr("onclick"))) >= 1)) {
+print(paste0('Capturando Parâmetros da Página ', i))
+link <- paste0(link_base,i)
+try(busca_parametros <- as.data.frame(read_html(link) %>% html_nodes("img") %>% html_attr("onclick")))
+base_parametros_final <- bind_rows(base_parametros_final, busca_parametros)
+#Sys.sleep(time = 15)
+i <- i + 1
+}
+link_base <- 'https://sistemas4.sc.gov.br/sea/portaldecompras/acompanha_licitacao_edital.asp?lstOrgaos=1&optNatureza=&lstAno=2022&lstSituacao=4&txtNuEdital=&lstModalidade=0&txtObjeto=&dataInclusao=&descricaoGrupoClasse=&paginaAtual='
+i <- 1
+link <- paste0(link_base,i)
+################################################################################
+#### captura os parâmetros para compor as URLs de acesso aos repositórios dos editais
+#### respositórios contidos nas primeiras 10 páginas
+options(warn = -1)
+link_base <- 'https://sistemas4.sc.gov.br/sea/portaldecompras/acompanha_licitacao_edital.asp?lstOrgaos=1&optNatureza=&lstAno=2022&lstSituacao=4&txtNuEdital=&lstModalidade=0&txtObjeto=&dataInclusao=&descricaoGrupoClasse=&paginaAtual='
+i <- 1
+link <- paste0(link_base,i)
+base_parametros_final <- data.frame()
+while (length(try(busca_parametros <- as.data.frame(read_html(link) %>% html_nodes("img") %>% html_attr("onclick"))) >= 1)) {
+print(paste0('Capturando Parâmetros da Página ', i))
+link <- paste0(link_base,i)
+try(busca_parametros <- as.data.frame(read_html(link) %>% html_nodes("img") %>% html_attr("onclick")))
+base_parametros_final <- bind_rows(base_parametros_final, busca_parametros)
+#Sys.sleep(time = 15)
+i <- i + 1
+}
+?suppressWarnings()
+library(bigrquery)
+library(rvest)
+library(tidyverse)
+library(janitor)
+library(xml2)
+library(stringr)
+################################################################################
+#### captura os parâmetros para compor as URLs de acesso aos repositórios dos editais
+#### respositórios contidos nas primeiras 10 páginas
+options(warn = -1)
+link_base <- 'https://sistemas4.sc.gov.br/sea/portaldecompras/acompanha_licitacao_edital.asp?lstOrgaos=1&optNatureza=&lstAno=2022&lstSituacao=4&txtNuEdital=&lstModalidade=0&txtObjeto=&dataInclusao=&descricaoGrupoClasse=&paginaAtual='
+i <- 1
+link <- paste0(link_base,i)
+base_parametros_final <- data.frame()
+while (length(try(busca_parametros <- as.data.frame(read_html(link) %>% html_nodes("img") %>% html_attr("onclick"))) >= 1)) {
+print(paste0('Capturando Parâmetros da Página ', i))
+link <- paste0(link_base,i)
+try(busca_parametros <- as.data.frame(read_html(link) %>% html_nodes("img") %>% html_attr("onclick")))
+base_parametros_final <- bind_rows(base_parametros_final, busca_parametros)
+#Sys.sleep(time = 15)
+i <- i + 1
+}
+base_parametros_final <- base_parametros_final %>% distinct_all()
+print(paste0('Total de Editais encontrados: ', nrow(base_parametros_final)))
+rm(busca_parametros)
+rm(link)
+rm(link_base)
+rm(num_pags)
+library("splitstackshape")
+colnames(base_parametros_final) <- 'parametros'
+base_parametros_final <- cSplit(base_parametros_final, "parametros", sep="'")
+base_parametros_final <- base_parametros_final[,c(2,4,6,8)]
+base_parametros_final <- base_parametros_final %>% rename("portal" = "parametros_2",
+"processo" = "parametros_4",
+"edital" = "parametros_6",
+"cdo" = "parametros_8")
+base_parametros_final$processo[is.na(base_parametros_final$processo)] <- ''
+base <- 'https://sistemas4.sc.gov.br/sea/portaldecompras/docs.asp?'
+portal <- 'portal='
+processo <- '&processo='
+cdo <- '&cdo='
+edital <- '&edital='
+base_links_direto <- data.frame()
+for (i in 1:nrow(base_parametros_final)) {
+print(paste0('Montando Link ', i, ' de ', nrow(base_parametros_final)))
+link_repositorio_edital <- paste0(base,
+portal, base_parametros_final$portal[i],
+processo, base_parametros_final$processo[i],
+cdo, base_parametros_final$cdo[i],
+edital, base_parametros_final$edital[i])
+busca_links <- as.data.frame(link_repositorio_edital)
+base_links_direto <- bind_rows(base_links_direto, busca_links)
+}
+base_links_direto <- base_links_direto %>% distinct_all()
+base_links_direto <- base_links_direto %>% arrange(link_repositorio_edital)
+rm(base)
+rm(portal)
+rm(processo)
+rm(cdo)
+rm(edital)
+rm(busca_links)
+rm(link_repositorio_edital)
+base_final <- bind_cols(base_parametros_final,base_links_direto)
+rm(base_parametros_final)
+rm(base_links_direto)
+links_documentos_final <- data.frame()
+for (i in 1:nrow(base_final)) {
+print(paste0('Raspando link ', i, ' de ', nrow(base_final)))
+try(lista <- (read_html(base_final$link_repositorio_edital[i]) %>% html_nodes('a') %>% html_attr('href')))
+link_documento <- as.data.frame(lista[1])
+link_documento$portal <- base_final$portal[i]
+link_documento$processo <- base_final$processo[i]
+link_documento$edital <- base_final$edital[i]
+link_documento$cdo <- base_final$cdo[i]
+link_documento$link_repositorio_edital <- base_final$link_repositorio_edital[i]
+links_documentos_final <- bind_rows(links_documentos_final, link_documento)
+#Sys.sleep(time = 15)
+}
+library(bigrquery)
+library(rvest)
+library(tidyverse)
+library(janitor)
+library(xml2)
+library(stringr)
+################################################################################
+#### captura os parâmetros para compor as URLs de acesso aos repositórios dos editais
+#### respositórios contidos nas primeiras 10 páginas
+options(warn = -1)
+link_base <- 'https://sistemas4.sc.gov.br/sea/portaldecompras/acompanha_licitacao_edital.asp?lstOrgaos=1&optNatureza=&lstAno=2022&lstSituacao=4&txtNuEdital=&lstModalidade=0&txtObjeto=&dataInclusao=&descricaoGrupoClasse=&paginaAtual='
+i <- 1
+link <- paste0(link_base,i)
+base_parametros_final <- data.frame()
+while (length(try(busca_parametros <- as.data.frame(read_html(link) %>% html_nodes("img") %>% html_attr("onclick"))) >= 1)) {
+print(paste0('Capturando Parâmetros da Página ', i))
+#try(busca_parametros <- as.data.frame(read_html(link) %>% html_nodes("img") %>% html_attr("onclick")))
+base_parametros_final <- bind_rows(base_parametros_final, busca_parametros)
+#Sys.sleep(time = 15)
+i <- i + 1
+link <- paste0(link_base,i)
+}
+base_parametros_final <- base_parametros_final %>% distinct_all()
+print(paste0('Total de Editais encontrados: ', nrow(base_parametros_final)))
+rm(busca_parametros)
+rm(link)
+rm(link_base)
+rm(num_pags)
+library("splitstackshape")
+colnames(base_parametros_final) <- 'parametros'
+base_parametros_final <- cSplit(base_parametros_final, "parametros", sep="'")
+base_parametros_final <- base_parametros_final[,c(2,4,6,8)]
+base_parametros_final <- base_parametros_final %>% rename("portal" = "parametros_2",
+"processo" = "parametros_4",
+"edital" = "parametros_6",
+"cdo" = "parametros_8")
+base_parametros_final$processo[is.na(base_parametros_final$processo)] <- ''
+base <- 'https://sistemas4.sc.gov.br/sea/portaldecompras/docs.asp?'
+portal <- 'portal='
+processo <- '&processo='
+cdo <- '&cdo='
+edital <- '&edital='
+base_links_direto <- data.frame()
+for (i in 1:nrow(base_parametros_final)) {
+print(paste0('Montando Link ', i, ' de ', nrow(base_parametros_final)))
+link_repositorio_edital <- paste0(base,
+portal, base_parametros_final$portal[i],
+processo, base_parametros_final$processo[i],
+cdo, base_parametros_final$cdo[i],
+edital, base_parametros_final$edital[i])
+busca_links <- as.data.frame(link_repositorio_edital)
+base_links_direto <- bind_rows(base_links_direto, busca_links)
+}
+base_links_direto <- base_links_direto %>% distinct_all()
+base_links_direto <- base_links_direto %>% arrange(link_repositorio_edital)
+rm(base)
+rm(portal)
+rm(processo)
+rm(cdo)
+rm(edital)
+rm(busca_links)
+rm(link_repositorio_edital)
+base_final <- bind_cols(base_parametros_final,base_links_direto)
+rm(base_parametros_final)
+rm(base_links_direto)
+links_documentos_final <- data.frame()
+for (i in 1:nrow(base_final)) {
+print(paste0('Raspando link ', i, ' de ', nrow(base_final)))
+try(lista <- (read_html(base_final$link_repositorio_edital[i]) %>% html_nodes('a') %>% html_attr('href')))
+link_documento <- as.data.frame(lista[1])
+link_documento$portal <- base_final$portal[i]
+link_documento$processo <- base_final$processo[i]
+link_documento$edital <- base_final$edital[i]
+link_documento$cdo <- base_final$cdo[i]
+link_documento$link_repositorio_edital <- base_final$link_repositorio_edital[i]
+links_documentos_final <- bind_rows(links_documentos_final, link_documento)
+#Sys.sleep(time = 15)
+}
+library(bigrquery)
+library(rvest)
+library(tidyverse)
+library(janitor)
+library(xml2)
+library(stringr)
+################################################################################
+#### captura os parâmetros para compor as URLs de acesso aos repositórios dos editais
+#### respositórios contidos nas primeiras 10 páginas
+options(warn = -1)
+link_base <- 'https://sistemas4.sc.gov.br/sea/portaldecompras/acompanha_licitacao_edital.asp?lstOrgaos=1&optNatureza=&lstAno=2022&lstSituacao=4&txtNuEdital=&lstModalidade=0&txtObjeto=&dataInclusao=&descricaoGrupoClasse=&paginaAtual='
+i <- 1
+link <- paste0(link_base,i)
+base_parametros_final <- data.frame()
+while (length(try(busca_parametros <- as.data.frame(read_html(link) %>% html_nodes("img") %>% html_attr("onclick"))) >= 1)) {
+print(paste0('Capturando Parâmetros da Página ', i))
+#try(busca_parametros <- as.data.frame(read_html(link) %>% html_nodes("img") %>% html_attr("onclick")))
+base_parametros_final <- bind_rows(base_parametros_final, busca_parametros)
+#Sys.sleep(time = 15)
+i <- i + 1
+link <- paste0(link_base,i)
+}
+base_parametros_final <- base_parametros_final %>% distinct_all()
+print(paste0('Total de Editais encontrados: ', nrow(base_parametros_final)))
+rm(busca_parametros)
+rm(link)
+rm(link_base)
+rm(num_pags)
+library("splitstackshape")
+colnames(base_parametros_final) <- 'parametros'
+base_parametros_final <- cSplit(base_parametros_final, "parametros", sep="'")
+base_parametros_final <- base_parametros_final[,c(2,4,6,8)]
+base_parametros_final <- base_parametros_final %>% rename("portal" = "parametros_2",
+"processo" = "parametros_4",
+"edital" = "parametros_6",
+"cdo" = "parametros_8")
+base_parametros_final$processo[is.na(base_parametros_final$processo)] <- ''
+base <- 'https://sistemas4.sc.gov.br/sea/portaldecompras/docs.asp?'
+portal <- 'portal='
+processo <- '&processo='
+cdo <- '&cdo='
+edital <- '&edital='
+base_links_direto <- data.frame()
+for (i in 1:nrow(base_parametros_final)) {
+print(paste0('Montando Link ', i, ' de ', nrow(base_parametros_final)))
+link_repositorio_edital <- paste0(base,
+portal, base_parametros_final$portal[i],
+processo, base_parametros_final$processo[i],
+cdo, base_parametros_final$cdo[i],
+edital, base_parametros_final$edital[i])
+busca_links <- as.data.frame(link_repositorio_edital)
+base_links_direto <- bind_rows(base_links_direto, busca_links)
+}
+base_links_direto <- base_links_direto %>% distinct_all()
+base_links_direto <- base_links_direto %>% arrange(link_repositorio_edital)
+rm(base)
+rm(portal)
+rm(processo)
+rm(cdo)
+rm(edital)
+rm(busca_links)
+rm(link_repositorio_edital)
+base_final <- bind_cols(base_parametros_final,base_links_direto)
+rm(base_parametros_final)
+rm(base_links_direto)
+links_documentos_final <- data.frame()
+for (i in 1:nrow(base_final)) {
+print(paste0('Raspando link ', i, ' de ', nrow(base_final)))
+try(lista <- (read_html(base_final$link_repositorio_edital[i]) %>% html_nodes('a') %>% html_attr('href')))
+link_documento <- as.data.frame(lista[1])
+link_documento$portal <- base_final$portal[i]
+link_documento$processo <- base_final$processo[i]
+link_documento$edital <- base_final$edital[i]
+link_documento$cdo <- base_final$cdo[i]
+link_documento$link_repositorio_edital <- base_final$link_repositorio_edital[i]
+links_documentos_final <- bind_rows(links_documentos_final, link_documento)
+#Sys.sleep(time = 15)
+}
+for (i in 1:nrow(itens)) {
+print(i)
+}
+for (i in 1:nrow(itens)) {
+print(i)
+}
+#### carrega dataset com as palavras chaves
+itens <- read.csv('Catalogo_Materiais_Basicos_oracle.csv')
+itens <- clean_names(itens)
+itens$desc_item <- str_to_upper(str_remove_all(string = itens$desc_item, pattern = '\\*'))
+for (i in 1:nrow(itens)) {
+print(i)
+}
+lista_ecnontrada <- ''
+lista_encontrada <- ''
+lista <- 'avestruz'
+library(bigrquery)
+library(rvest)
+library(tidyverse)
+library(janitor)
+library(xml2)
+library(stringr)
+str_detect(lista, pattern = 'ave')
+str_detect(lista, pattern = 'aves')
+str_match(lista, pattern = 'aves')
+str_match(lista, pattern = 'aves')
+str_match(lista, pattern = 'ave')
+str_sub(lista, pattern = 'ave')
+grepl(lista, pattern = 'ave')
+grepl(lista, pattern = 'avea')
+grepl(lista, pattern = 'avea')
+grepl(lista, pattern = 'avesa')
+grepl(lista, pattern = 'aves')
+str_detect(lista, pattern = 'aves')
+str_locate(lista, pattern = 'aves')
+str_locate_all(lista, pattern = 'aves')
+str_match(lista, pattern = 'aves')
+str_view(lista, pattern = 'aves')
+str_which(lista, pattern = 'aves')
+str_which(lista, pattern = '\\aves')
+str_detect(lista, pattern = 'ave')
+str_detect(lista, pattern = '\\ave')
+str_detect(lista, pattern = '\\avestruz')
+str_detect(lista, pattern = '\\avestruz\\')
+str_detect(lista, pattern = '\\avestruz')
+str_detect(lista, pattern = '\avestruz')
+str_detect(lista, pattern = 'avestruz')
+str_detect(lista, pattern = 'avestru')
+str_detect(lista, pattern = '\\bavestru')
+str_detect(lista, pattern = '^bavestru$')
+str_detect(lista, pattern = '^bavestrus$')
+str_detect(lista, pattern = '^avestrus$')
+str_detect(lista, pattern = '^avestrus^')
+str_detect(lista, pattern = '^avestruz^')
+str_detect(lista, pattern = '^avestruz$')
+#### carrega dataset com as palavras chaves
+itens <- read.csv('Catalogo_Materiais_Basicos_oracle.csv')
+itens <- clean_names(itens)
+itens$desc_item <- str_to_upper(str_remove_all(string = itens$desc_item, pattern = '\\*'))
+lista_encontrada <- ''
+for (i in 1:nrow(base_final$conteudo_edital)) {
+for (b in 1:nrow(itens)) {
+if (str_detect(string = base_final$conteudo_edital[i], pattern = itens$desc_item[b])==TRUE) {
+lista <- itens$desc_item[b]
+lista_encontrada <- paste0(lista_encontrada,', ', lista)
+}
+}
+}
+lista_encontrada <- ''
+for (i in 1:nrow(base_final$conteudo_edital)) {
+for (b in 1:nrow(itens)) {
+if (str_detect(string = base_final$conteudo_edital[i], pattern = itens$desc_item[b])==TRUE) {
+lista <- itens$desc_item[b]
+lista_encontrada <- paste0(lista_encontrada,', ', lista)
+}
+}
+}
+if (str_detect(string = base_final$conteudo_edital[i], pattern = itens$desc_item[b])==TRUE) {
+lista <- itens$desc_item[b]
+lista_encontrada <- paste0(lista_encontrada,', ', lista)
+}
+base_final_com_regex <- data_frame()
+base_final_com_regex <- data_frame()
+teste <- base_final
+#### carrega dataset com as palavras chaves
+itens <- read.csv('Catalogo_Materiais_Basicos_oracle.csv')
+itens <- clean_names(itens)
+itens$desc_item <- str_to_upper(str_remove_all(string = itens$desc_item, pattern = '\\*'))
+base_final_com_regex <- data_frame()
+for (i in 1:nrow(base_final$conteudo_edital)) {
+for (b in 1:nrow(itens)) {
+if (str_detect(string = base_final$conteudo_edital[i], pattern = itens$desc_item[b])==TRUE) {
+lista <- itens$desc_item[b]
+teste$regex[i] <- paste0(lista_encontrada,', ', lista)
+}
+}
+}
+base_final_com_regex <- data_frame()
+for (i in 1:nrow(base_final)) {
+for (b in 1:nrow(itens)) {
+if (str_detect(string = base_final$conteudo_edital[i], pattern = itens$desc_item[b])==TRUE) {
+lista <- itens$desc_item[b]
+teste$regex[i] <- paste0(lista_encontrada,', ', lista)
+}
+}
+}
+(str_detect(string = base_final$conteudo_edital[i], pattern = itens$desc_item[b])==TRUE)
+(str_detect(string = base_final$conteudo_edital[i], pattern = itens$desc_item[b])==TRUE)
+(str_detect(string = base_final$conteudo_edital[i], pattern = itens$desc_item[b])==TRUE)
+(str_detect(string = base_final$conteudo_edital[i], pattern = itens$desc_item[b])==TRUE)
+(str_detect(string = base_final$conteudo_edital[i], pattern = itens$desc_item[b])==TRUE)
+(str_detect(string = base_final$conteudo_edital[i], pattern = itens$desc_item[b])==TRUE)
+base_final$conteudo_edital[i]
+base_final$conteudo_edital[i]
+base_final$conteudo_edital[i]
+base_final$conteudo_edital[i]
+base_final$conteudo_edital[i]
+base_final$conteudo_edital[i]
+base_final$conteudo_edital[i]
+i=17
+base_final$conteudo_edital[i]
+base_final$conteudo_edital

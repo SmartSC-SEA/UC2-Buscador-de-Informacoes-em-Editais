@@ -1,0 +1,10 @@
+library(rvest)
+
+lista_orgao <- 'https://sistemas4.sc.gov.br/sea/portaldecompras/pesquisa_editais_p.asp?cdo=**CDO**'
+
+lista_orgao <- read_html(lista_orgao) %>% html_nodes('option')
+orgao_cod <- lista_orgao %>% html_attr('value')
+orgao_nome <- lista_orgao %>% html_text()
+
+df_orgaos <- data.frame(orgao_cod, orgao_nome)
+df_orgaos <- df_orgaos[3:75,]

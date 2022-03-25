@@ -1,0 +1,37 @@
+
+library(rvest)
+library(tidyverse)
+library(janitor)
+library(xml2)
+
+######################### LISTA DE ÓRGÃOS
+
+source(file = 'lista_orgaos.R', encoding = 'utf-8')
+
+#########################
+
+link_base <- 'https://sistemas4.sc.gov.br/sea/portaldecompras/acompanha_licitacao_edital.asp?lstOrgaos=1&optNatureza=&lstAno=2022&lstSituacao=4&txtNuEdital=&lstModalidade=0&txtObjeto=&dataInclusao=&descricaoGrupoClasse=&paginaAtual='
+
+num_pags  <- 1:10
+
+base_final <- data.frame()
+for (i in 1:length(1:10)) {
+  link <- paste0(link_base,str(i))
+  page <- read_html(link)
+  tabela <- page %>% html_table()
+  tabela <- as.data.frame(tabela[2])
+  base_final <- bind_rows(base_final,
+                          tabela)
+}
+
+colnames(base_final) <- base_final[1,]
+base_final <- base_final[-1,]
+base_final <- clean_names(base_final) 
+base_final <- base_final %>% arrange(processo)
+
+#########################
+
+
+
+
+
