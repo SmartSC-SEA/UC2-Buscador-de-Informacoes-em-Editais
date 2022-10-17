@@ -2,7 +2,7 @@
 Repositório do projeto de robô para busca de informações sobre materiais e serviços nos editais de licitação do Governo do Estado de Santa Catarina.
 
 # Link para acesso do Dashboard:
-https://datastudio.google.com/u/0/reporting/530511a0-55fb-49c9-a36e-ec5a96e32e11/page/zS2nC
+https://datastudio.google.com/u/0/reporting/d2e10796-2f70-4179-a762-6dec0fce36b0/page/p_hph188vyyc
 
 ## Arquitetura
 ### **Front-end**
