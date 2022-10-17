@@ -1,0 +1,26 @@
+{
+    "id": "5E48B7D4",
+    "path": "~/GitHub/BIEL-robo-buscador-de-informacoes-em-editais-de-licitacao-1/baixa_bigquery/baixa_bigquery.R",
+    "project_path": "baixa_bigquery/baixa_bigquery.R",
+    "type": "r_source",
+    "hash": "3492424097",
+    "contents": "",
+    "dirty": false,
+    "created": 1666034377865.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "64,37",
+        "scrollLine": "48"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1666034410,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1666034410392,
+    "read_only": false,
+    "read_only_alternatives": []
+}
